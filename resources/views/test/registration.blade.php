@@ -1,7 +1,7 @@
 <x-basecomponent>
     <style>
         body {
-            background-color: #fff;
+            background-color: #c44e4e;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
@@ -16,7 +16,7 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            color: white;
+            color: rgb(255, 255, 255);
         }
 
         .form-control::placeholder {

@@ -1,5 +1,5 @@
 <x-basecomponent>
-    
+
     <style>
         body {
             background-color: #fff;
@@ -7,7 +7,7 @@
         }
 
         .top-banner {
-            background-color: #2e7d32;
+            background-color: #c4c4c4;
             border-bottom-left-radius: 50px;
             border-bottom-right-radius: 50px;
             border-top-right-radius: 13px;
@@ -29,7 +29,7 @@
             top: 50%;
             left: 10px;
             transform: translateY(-50%);
-            color: green;
+            color: rgb(107, 107, 107);
         }
 
         .form-group {
@@ -41,18 +41,18 @@
         }
 
         .login-btn {
-            background-color: #2e7d32;
+            background-color: #686868;
             color: #fff;
             border-radius: 10px;
         }
 
         .login-btn:hover {
-            background-color: #256428;
+            background-color: #4e4e4e;
         }
 
         .register-link,
         .forgot-password {
-            color: #2e7d32;
+            color: #666666;
             font-weight: 500;
         }
 

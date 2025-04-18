@@ -10,4 +10,8 @@ class Debug extends Controller
     {
         return view('test.registration');
     }
+    public function homepage()
+    {
+        return view('test.homepage');
+    }
 }
