@@ -153,16 +153,70 @@
     </div>
 
     <div class="bg-section">
+    
         <div class="search-container d-flex align-items-center">
             <input type="text" class="form-control search-input" placeholder="Search projects...">
             <button type="submit" class="search-btn">
             <i class="bi bi-search"></i>
             </button>
         </div>
+            
         <div class="footer-overlay">
             <p>&copy; 2025 KUPtech Project</p>
         </div>
+        <div class="container mt-4 mb-5">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="card shadow-sm border-0"> 
+                        <h4 class="mb-5"></h4>
+                    <div class="card-body table-responsive">
+                        <table class="table table-hover align-middle">
+                            <thead class="table-success">
+                                <tr>
+                                    <th scope="col">Capstone Title</th>
+                                    <th scope="col">Author</th>
+                                    <th scope="col">Year</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>RehisPRC: Revolutionizing Data Entry and Retrieval for Madrid’s Local Civil Registry</td>
+                                    <td>Calipayán’s Group</td>
+                                    <td>2025</td>
+                                </tr>
+                                <tr>
+                                    <td>OJTrack – Android and Web-Based DJT Monitoring and Attendance System with Secure Tracking</td>
+                                    <td>Atenin’s Group</td>
+                                    <td>2025</td>
+                                </tr>
+                                <tr>
+                                    <td>eLixbot: A Mobile App for Tourism Promotion and Local Business in CCMCLCor</td>
+                                    <td>Riva’s Group</td>
+                                    <td>2025</td>
+                                </tr>
+                                <tr>
+                                    <td>MedSched: A Web-App Appointment Scheduling System with SMS Notifications</td>
+                                    <td>Aguirre’s Group</td>
+                                    <td>2025</td>
+                                </tr>
+                                <tr>
+                                    <td>eTitulo: A Smart Solution for Lot Reservation, Processing, and Checklist Requirements</td>
+                                    <td>Carisday’s Group</td>
+                                    <td>2025</td>
+                                </tr>
+                                <tr>
+                                    <td>Event Planning Management System</td>
+                                    <td>Lalyns Group</td>
+                                    <td>2025</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
+    </div>
+        
 
   </x-basecomponent>
