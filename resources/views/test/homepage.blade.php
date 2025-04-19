@@ -44,7 +44,7 @@
         margin: 0 auto;
         width: 100%;
         color: white;
-        border-radius: 8px;
+        border-radius: 5px;
       }
 
       .btn-primary {
@@ -138,6 +138,7 @@
   font-weight: 500;
   font-size: 14px;
   box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+      }
     </style>
 
     <!-- Bootstrap Icons CDN -->

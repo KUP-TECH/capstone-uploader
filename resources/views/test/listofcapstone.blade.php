@@ -27,7 +27,7 @@
             font-size: 13px;
         }
         }
-      .header-title {
+    .header-title {
         background-color: #2e7d32;
         color: #ffffff;
         padding: 30px;
@@ -36,31 +36,27 @@
         text-align: left;
         font-size: 26px;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      }
-
-      .custom-container {
+    }
+    .custom-container {
         background-color: #40af45;
         padding: 25px 15px;
         margin: 0 auto;
         width: 100%;
         color: white;
         border-radius: 8px;
-      }
-
-      .btn-primary {
+    }
+    .btn-primary {
         background-color: #2e7d32  ;
         border: none;
         padding: 10px 20px;
         font-weight: 500;
         transition: background-color 0.3s ease;
         border-radius: 6px;
-      }
-
-      .btn-primary:hover {
+    }
+    .btn-primary:hover {
         background-color: #aedda0;
-      }
-
-      .bg-section {
+    }
+    .bg-section {
         position: relative;
         background-image: url('/images/kups.jpg');
         background-size: cover;
@@ -71,9 +67,8 @@
         align-items: flex-start;
         justify-content: center;
         overflow: hidden;
-      }
-
-      .bg-section::before {
+    }
+    .bg-section::before {
         content: "";
         position: absolute;
         top: 0;
@@ -82,32 +77,58 @@
         height: 100%;
         background-color: rgba(255, 255, 255, 0.6);
         z-index: 1;
-      }
+    }
 
-      .bg-section .content {
+    .bg-section .content {
         position: relative;
         z-index: 2;
         text-align: center;
         color: #000;
         padding-top: 30px;
-      }
+    }
+    .footer-overlay {
+        position: fixed; /* 🔁 Changed from absolute to fixed */
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #2e7d32;
+        color: white;
+        text-align: center;
+        padding: 15px 0;
+        z-index: 100;
+        font-weight: 500;
+        font-size: 14px;
+        box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+    }
+    .search-container {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 10;
+        width: 300px;
+        display: flex;
+        gap: 5px;
+    }
+    .search-input {
+        flex: 1;
+        padding: 8px 12px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+    }
+    .search-btn {
+        background-color: #2e7d32;
+        border: none;
+        color: white;
+        padding: 8px 12px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .search-btn:hover {
+        background-color: #256428;
+    }
 
-
-
-      .footer-overlay {
-  position: fixed; /* 🔁 Changed from absolute to fixed */
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #2e7d32;
-  color: white;
-  text-align: center;
-  padding: 15px 0;
-  z-index: 100;
-  font-weight: 500;
-  font-size: 14px;
-  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
-}
     </style>
 
     <!-- Bootstrap Icons CDN -->
@@ -134,15 +155,16 @@
     </div>
 
     <div class="bg-section">
-
-
-
-
-
+        <div class="search-container d-flex align-items-center">
+          <input type="text" class="form-control search-input" placeholder="Search projects...">
+          <button type="submit" class="search-btn">
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
       </div>
-
       <div class="footer-overlay">
         <p>&copy; 2025 KUPtech Project</p>
       </div>
-    </div>
+
+
   </x-basecomponent>

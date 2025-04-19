@@ -135,47 +135,57 @@
 
     <div class="bg-section">
         <div class="content container">
-          <div class="bg-white p-4 rounded shadow" style="max-width: 600px; margin: 0 auto;">
-            <h4 class="text-center mb-4" style="color: #2e7d32;">Capstone Submission Form</h4>
+            <div class="bg-white p-5 rounded-4 shadow-lg" style="max-width: 700px; margin: 0 auto; border: 1px solid #e0e0e0;">
+                <h3 class="text-center mb-4 fw-bold" style="color: #2e7d32;">Project Submission & Document Management</h3>
 
-            <form method="POST" action="#" enctype="multipart/form-data">
-              @csrf <!-- Only if you're submitting to a Laravel route -->
+                <form method="POST" action="#" enctype="multipart/form-data">
+                  <!-- Laravel CSRF token -->
+                  <input type="hidden" name="_token" value="7f6KEI6I8PEuwLKVbv3RfYVPWuzCBxrrmdVv0ovs">
 
-              <div class="mb-3">
-                <label for="projectTitle" class="form-label">Project Title</label>
-                <input type="text" class="form-control" id="projectTitle" placeholder="Enter project title">
+                  <!-- Project Title -->
+                  <div class="form-floating mb-4">
+                    <input type="text" class="form-control shadow-sm" id="projectTitle" placeholder="Enter project title">
+                    <label for="projectTitle">Project Title</label>
+                  </div>
+
+                  <!-- Project Year -->
+                  <div class="form-floating mb-4">
+                    <input type="number" class="form-control shadow-sm" id="projectYear" placeholder="e.g. 2025">
+                    <label for="projectYear">Year Project Uploaded</label>
+                  </div>
+
+                  <!-- Category -->
+                  <div class="form-floating mb-4">
+                    <select class="form-select shadow-sm" id="category" aria-label="Select category">
+                      <option selected disabled>Select category</option>
+                      <option value="iot">IOT-based</option>
+                      <option value="app">APP-based</option>
+                      <option value="web">Web-based</option>
+                    </select>
+                    <label for="category">Category</label>
+                  </div>
+
+                  <!-- Group Name -->
+                  <div class="form-floating mb-4">
+                    <input type="text" class="form-control shadow-sm" id="groupName" placeholder="Enter group name">
+                    <label for="groupName">Group Name</label>
+                  </div>
+
+                  <!-- File Upload -->
+                  <div class="mb-4">
+                    <label for="capstoneFile" class="form-label fw-semibold">Upload Capstone File</label>
+                    <input type="file" class="form-control shadow-sm" id="capstoneFile">
+                  </div>
+
+                  <!-- Submit Button -->
+                  <div class="d-grid">
+                    <button type="submit" class="btn btn-success py-2 fw-semibold" style="background-color: #2e7d32; border: none;">
+                      <i class="bi bi-upload me-2"></i>Submit Project
+                    </button>
+                  </div>
+                </form>
               </div>
 
-              <div class="mb-3">
-                <label for="projectYear" class="form-label">Year Project Uploaded</label>
-                <input type="number" class="form-control" id="projectYear" placeholder="e.g. 2025">
-              </div>
-
-              <div class="mb-3">
-                <label for="category" class="form-label">Category</label>
-                <select class="form-control" id="category">
-                  <option disabled selected>Select category</option>
-                  <option>IOT-based</option>
-                  <option>APP-based</option>
-                  <option>Web-based</option>
-                </select>
-              </div>
-
-              <div class="mb-3">
-                <label for="groupName" class="form-label">Group Name</label>
-                <input type="text" class="form-control" id="groupName" placeholder="Enter group name">
-              </div>
-
-              <div class="mb-4">
-                <label for="capstoneFile" class="form-label">Upload Capstone File</label>
-                <input type="file" class="form-control" id="capstoneFile">
-              </div>
-
-              <div class="d-grid">
-                <button type="submit" class="btn btn-primary">Submit Project</button>
-              </div>
-            </form>
-          </div>
         </div>
       </div>
 
