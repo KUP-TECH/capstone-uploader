@@ -62,7 +62,7 @@
 
       .bg-section {
         position: relative;
-        background-image: url('/images/kups.jpg');
+        background-image: url('images/kups.jpg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;

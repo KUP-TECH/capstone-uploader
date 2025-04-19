@@ -62,7 +62,7 @@
 
       .bg-section {
         position: relative;
-        background-image: url('/images/kups.jpg');
+        background-image: url('images/kups.jpg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -178,7 +178,7 @@
                   </div>
 
                   <!-- Submit Button -->
-                  <div class="d-grid">
+                  <div class="d-flex flex-row justify-content-center">
                     <button type="submit" class="btn btn-success py-2 fw-semibold" style="background-color: #2e7d32; border: none;">
                       <i class="bi bi-upload me-2"></i>Submit Project
                     </button>
