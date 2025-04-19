@@ -58,7 +58,7 @@
     }
     .bg-section {
         position: relative;
-        background-image: url('/images/kups.jpg');
+        background-image: url('images/kups.jpg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -132,39 +132,38 @@
     </style>
 
     <!-- Bootstrap Icons CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
+    
 
     <!-- Inline icon with title -->
     <h2 class="header-title d-flex align-items-center">
         <a href="{{ route('home') }}" class="text-white me-2" style="text-decoration: none;">
-          <i class="bi bi-house-door-fill"></i>
+            <i class="bi bi-house-door-fill"></i>
         </a>
         Capstone Project Portal
-      </h2>
+    </h2>
 
     <div class="container custom-container d-flex flex-wrap justify-content-center text-center py-4 px-2">
-      <div class="row gx-5">
-        <div class="col d-flex justify-content-center mb-3">
-            <a href="{{ route('list') }}" class="btn btn-primary">List of Capstone</a>
-          </div>
-          <div class="col d-flex justify-content-center mb-3">
-            <a href="{{ route('uploads') }}" class="btn btn-primary">Upload a Project</a>
-          </div>
-
-      </div>
+        <div class="row gx-5">
+            <div class="col d-flex justify-content-center mb-3">
+                <a href="{{ route('list') }}" class="btn btn-primary">List of Capstone</a>
+            </div>
+            <div class="col d-flex justify-content-center mb-3">
+                <a href="{{ route('uploads') }}" class="btn btn-primary">Upload a Project</a>
+            </div>
+        </div>
     </div>
 
     <div class="bg-section">
         <div class="search-container d-flex align-items-center">
-          <input type="text" class="form-control search-input" placeholder="Search projects...">
-          <button type="submit" class="search-btn">
+            <input type="text" class="form-control search-input" placeholder="Search projects...">
+            <button type="submit" class="search-btn">
             <i class="bi bi-search"></i>
-          </button>
+            </button>
         </div>
-      </div>
-      <div class="footer-overlay">
-        <p>&copy; 2025 KUPtech Project</p>
-      </div>
+        <div class="footer-overlay">
+            <p>&copy; 2025 KUPtech Project</p>
+        </div>
+    </div>
 
 
   </x-basecomponent>
