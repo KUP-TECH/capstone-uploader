@@ -106,8 +106,8 @@
                             <input type="password" class="form-control" placeholder="Confirm Password">
                             <i class="bi bi-eye-slash-fill form-icon-right"></i>
                         </div>
-                        <div class="d-grid mb-3">
-                            <button type="submit" class="btn register-btn">Register</button>
+                        <div class="d-flex flex-row justify-content-center mb-3">
+                            <button type="submit" class="btn register-btn px-5">Register</button>
                         </div>
                         <div class="text-center">
                             <h6>Already have an account? <a href="{{ route('login') }}" class="login-link">Log in</a>
