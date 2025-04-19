@@ -80,7 +80,7 @@
         <div class="card-border">
             <div class="card-body">
                 <div class="top-banner text-center">
-                    <img src="" class="mb-2" alt="Logo" style="border-radius: 50%; width: 60px; height: 60px;">
+                    <img src="{{asset('images/capstonelogo.png')}}" class="mb-2" alt="" style="border-radius: 50%; width: 70px; height: 70px;">
                     <h1>Registration</h1>
                 </div>
 
