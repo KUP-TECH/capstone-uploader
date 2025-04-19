@@ -73,7 +73,7 @@
         <div class="card card-border">
             <div class="card-body">
                 <div class="top-banner text-center">
-                    <img src="{{('')}}" class="mb-2" alt="Logo" style="border-radius: 50%; width: 60px; height: 60px;">
+                    <img src="{{ route('assets/images.kups.jpg')}}" class="mb-2" alt="Logo" style="border-radius: 50%; width: 60px; height: 60px;">
                     <h2>Welcome!</h2>
                 </div>
 
