@@ -36,6 +36,7 @@
         text-align: left;
         font-size: 26px;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 1px;
       }
 
       .custom-container {
@@ -44,7 +45,7 @@
         margin: 0 auto;
         width: 100%;
         color: white;
-        border-radius: 5px;
+        
       }
 
       .btn-primary {

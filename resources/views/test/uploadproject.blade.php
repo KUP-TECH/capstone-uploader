@@ -36,6 +36,7 @@
         text-align: left;
         font-size: 26px;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 1px;
       }
 
       .custom-container {
@@ -95,18 +96,18 @@
 
 
       .footer-overlay {
-  position: fixed; /* 🔁 Changed from absolute to fixed */
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #2e7d32;
-  color: white;
-  text-align: center;
-  padding: 15px 0;
-  z-index: 100;
-  font-weight: 500;
-  font-size: 14px;
-  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+      position: fixed; /* 🔁 Changed from absolute to fixed */
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      z-index: 100;
+      font-weight: 500;
+      font-size: 14px;
+      box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
 }
     </style>
 
