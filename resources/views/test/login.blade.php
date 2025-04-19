@@ -90,11 +90,9 @@
                                 <i class="bi bi-eye-slash-fill"></i>
                             </span>
                         </div>
-                        <div class="mb-3 text-end">
-                            <a href="#" class="forgot-password">Forgot Password?</a>
-                        </div>
-                        <div class="d-grid mb-3">
-                            <button type="submit" class="btn login-btn">Log in</button>
+                        
+                        <div class="mb-3 d-flex flex-row justify-content-center">
+                            <button type="submit" class="btn login-btn px-5">Log in</button>
                         </div>
                         <div class="text-center">
                             <h6>Don't have an account? <a href="#" class="register-link">Register</a></h6>
