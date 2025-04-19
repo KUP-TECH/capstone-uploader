@@ -67,13 +67,14 @@
         .card-body {
             padding:0;
         }
+
     </style>
 
     <div class="container">
         <div class="card card-border">
             <div class="card-body">
                 <div class="top-banner text-center">
-                    <img src="{{ route('assets/images.kups.jpg')}}" class="mb-2" alt="Logo" style="border-radius: 50%; width: 60px; height: 60px;">
+                    <img src="{{asset('images/capstonelogo.png')}}" alt="" style="border-radius: 50%; width: 70px; height: 70px;"class="mb-2">
                     <h2>Welcome!</h2>
                 </div>
 
