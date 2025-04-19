@@ -1,7 +1,7 @@
 <x-basecomponent>
     <style>
         body {
-            background-color: #c44e4e;
+            background-color: #ffffff00;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
@@ -110,7 +110,8 @@
                             <button type="submit" class="btn register-btn">Register</button>
                         </div>
                         <div class="text-center">
-                            <h6>Already have an account? <a href="#" class="login-link">Log in</a></h6>
+                            <h6>Already have an account? <a href="{{ route('login') }}" class="login-link">Log in</a>
+                            </h6>
                         </div>
                     </form>
                 </div>

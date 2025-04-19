@@ -78,7 +78,7 @@
                 </div>
 
                 <div class="px-4 pt-4 pb-3">
-                    <form>
+                    <form action="{{ route('home') }}" method="GET">
                         <div class="form-group mb-3">
                             <i class="bi bi-envelope-fill form-icon"></i>
                             <input type="email" class="form-control" placeholder="Email">

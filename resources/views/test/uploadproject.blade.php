@@ -92,38 +92,7 @@
         padding-top: 30px;
       }
 
-      .total-label {
-        font-size: 20px;
-        font-weight: 600;
-        color: #000;
-      }
 
-      .totalcapstone {
-        background-color: #ffffff;
-        color: #000000;
-        font-size: 16px;
-        font-weight: bold;
-        padding: 8px 16px;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
-        display: inline-block;
-        margin-top: 10px;
-      }
-
-      .chart-container {
-        width: 100%;
-        max-width: 800px;
-        margin: 30px auto;
-        padding-top: 20px;
-      }
-
-      .chart-wrapper {
-        width: 100%;
-        padding: 30px 20px;
-        background-color: #ffffff;
-        border-radius: 12px;
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-      }
 
       .footer-overlay {
   position: fixed; /* 🔁 Changed from absolute to fixed */
@@ -138,6 +107,7 @@
   font-weight: 500;
   font-size: 14px;
   box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+}
     </style>
 
     <!-- Bootstrap Icons CDN -->
@@ -145,8 +115,11 @@
 
     <!-- Inline icon with title -->
     <h2 class="header-title d-flex align-items-center">
-      <i class="bi bi-house-door-fill me-2"></i> Capstone Project Portal
-    </h2>
+        <a href="{{ route('home') }}" class="text-white me-2" style="text-decoration: none;">
+          <i class="bi bi-house-door-fill"></i>
+        </a>
+        Capstone Project Portal
+      </h2>
 
     <div class="container custom-container d-flex flex-wrap justify-content-center text-center py-4 px-2">
       <div class="row gx-5">
@@ -156,70 +129,59 @@
           <div class="col d-flex justify-content-center mb-3">
             <a href="{{ route('uploads') }}" class="btn btn-primary">Upload a Project</a>
           </div>
+
       </div>
     </div>
 
     <div class="bg-section">
-      <div class="content">
-        <div class="total-wrapper">
-          <label class="total-label">Submitted Capstone:</label>
-          <div class="totalcapstone">43</div>
-        </div>
+        <div class="content container">
+          <div class="bg-white p-4 rounded shadow" style="max-width: 600px; margin: 0 auto;">
+            <h4 class="text-center mb-4" style="color: #2e7d32;">Capstone Submission Form</h4>
 
-        <!-- Chart.js bar chart container -->
-        <div class="container chart-container">
-          <div class="chart-wrapper">
-            <canvas id="myChart"></canvas>
+            <form method="POST" action="#" enctype="multipart/form-data">
+              @csrf <!-- Only if you're submitting to a Laravel route -->
+
+              <div class="mb-3">
+                <label for="projectTitle" class="form-label">Project Title</label>
+                <input type="text" class="form-control" id="projectTitle" placeholder="Enter project title">
+              </div>
+
+              <div class="mb-3">
+                <label for="projectYear" class="form-label">Year Project Uploaded</label>
+                <input type="number" class="form-control" id="projectYear" placeholder="e.g. 2025">
+              </div>
+
+              <div class="mb-3">
+                <label for="category" class="form-label">Category</label>
+                <select class="form-control" id="category">
+                  <option disabled selected>Select category</option>
+                  <option>IOT-based</option>
+                  <option>APP-based</option>
+                  <option>Web-based</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label for="groupName" class="form-label">Group Name</label>
+                <input type="text" class="form-control" id="groupName" placeholder="Enter group name">
+              </div>
+
+              <div class="mb-4">
+                <label for="capstoneFile" class="form-label">Upload Capstone File</label>
+                <input type="file" class="form-control" id="capstoneFile">
+              </div>
+
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary">Submit Project</button>
+              </div>
+            </form>
           </div>
         </div>
-
-        <!-- Chart.js script -->
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script>
-          const ctx = document.getElementById('myChart').getContext('2d');
-          const myChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-              labels: ['IOT-based', 'APP-based', 'Web-based'],
-              datasets: [{
-                data: [50, 10, 20],
-                backgroundColor: [
-                  'rgba(0, 123, 255, 0.5)',
-                  'rgba(220, 53, 69, 0.5)',
-                  'rgba(255, 193, 7, 0.5)'
-                ],
-                borderWidth: 1
-              }]
-            },
-            options: {
-              plugins: {
-                legend: {
-                  display: false
-                }
-              },
-              scales: {
-                y: {
-                  beginAtZero: true,
-                  ticks: {
-                    stepSize: 5
-                  },
-                  grid: {
-                    display: false
-                  }
-                },
-                x: {
-                  grid: {
-                    display: false
-                  }
-                }
-              }
-            }
-          });
-        </script>
       </div>
 
       <div class="footer-overlay">
         <p>&copy; 2025 KUPtech Project</p>
       </div>
-    </div>
+
+
   </x-basecomponent>

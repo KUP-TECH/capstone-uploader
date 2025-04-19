@@ -10,8 +10,21 @@ class Debug extends Controller
     {
         return view('test.registration');
     }
+        public function login()
+    {
+        return view('test.login');
+    }
+
     public function homepage()
     {
         return view('test.homepage');
+    }
+        public function listofcapstone()
+    {
+        return view('test.listofcapstone');
+    }
+    public function uploadaproject()
+    {
+        return view('test.uploadproject');
     }
 }
