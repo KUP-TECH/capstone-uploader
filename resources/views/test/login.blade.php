@@ -7,7 +7,7 @@
         }
 
         .top-banner {
-            background-color: #c4c4c4;
+            background-color: #2e7d32;
             border-bottom-left-radius: 50px;
             border-bottom-right-radius: 50px;
             border-top-right-radius: 13px;
@@ -41,7 +41,7 @@
         }
 
         .login-btn {
-            background-color: #686868;
+            background-color: #2e7d32;
             color: #fff;
             border-radius: 10px;
         }
@@ -52,7 +52,7 @@
 
         .register-link,
         .forgot-password {
-            color: #666666;
+            color: #2e7d32;
             font-weight: 500;
         }
 
