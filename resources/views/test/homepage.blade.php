@@ -162,7 +162,7 @@
     </div>
 
     <div class="bg-section">
-      <div class="content">
+      <div class="content mt-5">
         <div class="total-wrapper">
           <label class="total-label">Submitted Capstone:</label>
           <div class="totalcapstone">43</div>
