@@ -8,8 +8,15 @@ use App\Models\CapstoneModel;
 class App extends Controller
 {
     public function index() {
+        $data = [];
 
-        return view('pages.homepage');
+        $data['count']  = $capstone = CapstoneModel::count();
+        $data['iot']   = CapstoneModel::where('type', 'IoT')->count();
+        $data['app']   = CapstoneModel::where('type', 'App')->count();
+        $data['web']   = CapstoneModel::where('type', 'Web')->count();
+        
+
+        return view('pages.homepage', ['data' => $data]);
     }
 
     public function upload() {
@@ -36,7 +43,7 @@ class App extends Controller
             $filename   = md5($orig) . '.' . $extension;
             $filePath   = $file->storeAs('projects', $filename, 'public');
 
-            CapstoneModel::create(
+            $model = CapstoneModel::create(
                 [
                     'user_id'   => Auth::id(),
                     'title'     => $data['title'],

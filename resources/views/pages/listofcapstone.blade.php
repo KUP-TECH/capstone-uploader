@@ -135,7 +135,7 @@
 
     <!-- Inline icon with title -->
     <h2 class="header-title d-flex align-items-center">
-        <a href="}" class="text-white me-2" style="text-decoration: none;">
+        <a href="{{ route('home')  }}" class="text-white me-2" style="text-decoration: none;">
             <i class="bi bi-house-door-fill"></i>
         </a>
         Capstone Project Portal

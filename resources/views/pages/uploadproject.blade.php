@@ -136,7 +136,7 @@
 
     <!-- Inline icon with title -->
     <h2 class="header-title d-flex align-items-center">
-        <a href="" class="text-white me-2" style="text-decoration: none;">
+        <a href="{{ route('home')  }}" class="text-white me-2" style="text-decoration: none;">
           <i class="bi bi-house-door-fill"></i>
         </a>
         Capstone Project Portal
@@ -177,7 +177,6 @@
                   <!-- Category -->
                   <div class="form-floating mb-4">
                     <select class="form-select shadow-sm" id="category" name="type" aria-label="Select category">
-                      <option selected disabled>Select category</option>
                       <option value="IoT">IOT-based</option>
                       <option value="App">APP-based</option>
                       <option value="Web">Web-based</option>

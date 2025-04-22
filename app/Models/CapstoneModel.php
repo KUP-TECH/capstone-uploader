@@ -14,8 +14,8 @@ class CapstoneModel extends Model
         'g_name',
         'file',
         'user_id',
-        'desc'
-        
+        'desc',
+        'type',
     ];
     protected $primaryKey = 'capstone_id';
 }

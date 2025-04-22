@@ -153,7 +153,7 @@
     <div class="container custom-container d-flex flex-wrap justify-content-center text-center py-4 px-2">
       <div class="row gx-5">
         <div class="col d-flex justify-content-center mt-2 align-items-center">
-            <a href="" class="btn btn-primary">List of Capstone</a>
+            <a href="{{ route('home')  }}" class="btn btn-primary">List of Capstone</a>
           </div>
           <div class="col d-flex justify-content-center mt-2">
             <a href="{{ route('upload')  }}" class="btn btn-primary text-nowrap">Upload a Project</a>
@@ -165,7 +165,7 @@
       <div class="content mt-5">
         <div class="total-wrapper">
           <label class="total-label">Submitted Capstone:</label>
-          <div class="totalcapstone">43</div>
+          <div class="totalcapstone">{{ $data['count'] }}</div>
         </div>
 
         <!-- Chart.js bar chart container -->
@@ -184,7 +184,7 @@
             data: {
               labels: ['IOT-based', 'APP-based', 'Web-based'],
               datasets: [{
-                data: [50, 10, 20],
+                data: [{{$data['iot']}}, {{$data['app']}}, {{$data['web']}}],
                 backgroundColor: [
                   'rgba(0, 123, 255, 0.5)',
                   'rgba(220, 53, 69, 0.5)',
