@@ -99,13 +99,13 @@
                         </div>
                         <div class="form-group mb-3">
                             <i class="bi bi-lock-fill form-icon-left"></i>
-                            <input type="password" class="form-control" name="password" placeholder="Password">
-                            <i class="bi bi-eye-slash-fill form-icon-right"></i>
+                            <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+                            <i class="bi bi-eye-slash-fill form-icon-right" onclick="showPassword()" id="eye-icon"></i>
                         </div>
                         <div class="form-group mb-3">
                             <i class="bi bi-lock-fill form-icon-left"></i>
-                            <input type="password" class="form-control" name="password_confirmation" placeholder="Confirm Password">
-                            <i class="bi bi-eye-slash-fill form-icon-right"></i>
+                            <input type="password" class="form-control" name="password_confirmation" id="password_confirmation" placeholder="Confirm Password">
+                            <i class="bi bi-eye-slash-fill form-icon-right" onclick="showPassword()" id="eye-icon-2"></i>
                         </div>
                         <div class="d-flex flex-row justify-content-center mb-3">
                             <button type="submit" class="btn register-btn px-5">Register</button>

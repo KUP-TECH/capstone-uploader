@@ -11,7 +11,7 @@
 <body>
 
     {{ $slot }}
-
+    <script src="{{ asset('assets/js/showpass.js') }}"></script>
 </body>
 
 

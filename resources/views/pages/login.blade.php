@@ -105,9 +105,9 @@
                         </div>
                         <div class="form-group mb-3">
                             <i class="bi bi-lock-fill form-icon"></i>
-                            <input type="password" class="form-control" name="password" placeholder="Password">
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Password">
                             <span class="position-absolute top-50 end-0 translate-middle-y me-3">
-                                <i class="bi bi-eye-slash-fill"></i>
+                                <i class="bi bi-eye-slash-fill" onclick="showPassword()"  id="eye-icon"></i>
                             </span>
                         </div>
                         
@@ -126,6 +126,6 @@
 
 
 
-
+    
 
 </x-basecomponent>
