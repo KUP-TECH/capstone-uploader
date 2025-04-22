@@ -19,4 +19,7 @@ Route::middleware(['auth'])->group(function (){
     Route::get('/list', [App::class,'list'])->name('list');
     Route::get('/upload', [App::class,'upload'])->name('upload');
     Route::post('/store_project', [App::class,'store'])->name('store');
+    Route::post('/delete_project', [App::class,'delete'])->name('delete');
+    Route::post('/download', [App::class,'download'])->name('download');
+    Route::get('/logout', [Auth::class,'logout'])->name('logout');  
 });

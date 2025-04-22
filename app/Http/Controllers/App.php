@@ -38,6 +38,47 @@ class App extends Controller
         return view('pages.uploadproject');
     }
 
+    public function delete(Request $request) {
+        $id = $request->input('id');
+        $capstone = CapstoneModel::find($id);
+        if ($capstone) {
+            
+            if($capstone['user_id'] != Auth::id()) {
+                return back()->with('msg', 'You are not authorized to delete this project.');
+            }
+            
+
+            if($capstone['file']) {
+                $filePath = public_path('storage/projects/' . $capstone['file']);
+                if (file_exists($filePath)) {
+                    unlink($filePath);
+                }
+            }
+            $capstone->delete();
+            return back()->with('msg', 'Project deleted successfully.');
+        } else {
+            return back()->with('msg', 'Project not found.');
+        }
+    }
+    
+    public function logout() {
+        Auth::logout();
+        return redirect()->route('login')->with('msg', 'Logged out successfully.');
+    }
+
+
+    public function download(Request $request) {
+        $id = $request->input('id');
+        $capstone = CapstoneModel::find($id);
+        if ($capstone) {
+            $filePath = public_path('storage/projects/' . $capstone['file']);
+            return response()->download($filePath);
+        } else {
+            return back()->with('msg', 'Project not found.');
+        }
+
+    }
+
     public function store(Request $request) {
         $data = $request->validate([
             'title'     => 'required',

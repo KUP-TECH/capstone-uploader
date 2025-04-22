@@ -1,4 +1,5 @@
 <x-basecomponent>
+    <x-sidebar> </x-sidebar>
     <style>
         body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -130,16 +131,9 @@
 
     </style>
 
-    <!-- Bootstrap Icons CDN -->
     
 
-    <!-- Inline icon with title -->
-    <h2 class="header-title d-flex align-items-center">
-        <a href="{{ route('home')  }}" class="text-white me-2" style="text-decoration: none;">
-            <i class="bi bi-house-door-fill"></i>
-        </a>
-        Capstone Project Portal
-    </h2>
+   
 
     <div class="container custom-container d-flex flex-wrap justify-content-center text-center py-4 px-2">
         <div class="row gx-6">
@@ -180,6 +174,8 @@
                                     <th scope="col">Capstone Title</th>
                                     <th scope="col">Author</th>
                                     <th scope="col">Year</th>
+                                    <th>Action</th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -189,6 +185,32 @@
                                         <td>{{ $d['title'] }}</td>
                                         <td>{{ $d['g_name'] }}</td>
                                         <td>{{ $d['year'] }}</td>
+
+
+                                        <td>
+                                            @if($d['user_id'] == Auth::user()->id)
+                                            <form action="{{ route('delete') }}" method="POST">
+                                                @csrf
+                                                <input type="hidden" name="id" value="{{ $d['capstone_id'] }}">
+                                                <button type="submit" class="btn btn-danger btn-sm" style="position: relative; z-index: 999;">Delete</button>
+                                            </form>
+                                            @endif
+
+
+                                        </td>
+                                        <td>
+                                            <form action="{{ route('download') }}" method="POST">
+                                                @csrf
+                                                <input type="hidden" name="id" value="{{ $d['capstone_id'] }}">
+                                                <button type="submit" class="btn btn-success btn-sm" style="position: relative; z-index: 999;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download"
+                                                    viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
+                                                    <path
+                                                        d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z" />
+                                                </svg></button>
+                                            </form>
+                                        </td>
                                     </tr>
                                 @endforeach
                             </tbody>

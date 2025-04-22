@@ -1,4 +1,5 @@
 <x-basecomponent>
+  <x-sidebar> </x-sidebar>
     <style>
         body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -135,12 +136,7 @@
     @endif
 
     <!-- Inline icon with title -->
-    <h2 class="header-title d-flex align-items-center">
-        <a href="{{ route('home')  }}" class="text-white me-2" style="text-decoration: none;">
-          <i class="bi bi-house-door-fill"></i>
-        </a>
-        Capstone Project Portal
-      </h2>
+   
 
     <div class="container custom-container d-flex flex-wrap justify-content-center text-center py-4 px-2">
       <div class="row gx-5">
@@ -170,7 +166,7 @@
 
                   <!-- Project Year -->
                   <div class="form-floating mb-4">
-                    <input type="number" class="form-control shadow-sm" name="year" id="projectYear" placeholder="e.g. 2025">
+                    <input type="number" class="form-control shadow-sm" name="year" id="projectYear" value="{{ \Carbon\Carbon::now()->year }}" placeholder="e.g. 2025">
                     <label for="projectYear">Year Project Uploaded</label>
                   </div>
 

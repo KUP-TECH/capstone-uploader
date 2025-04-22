@@ -1,4 +1,5 @@
 <x-basecomponent>
+  <x-sidebar> </x-sidebar>
     <style>
         body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -30,7 +31,7 @@
       .header-title {
         background-color: #2e7d32;
         color: #ffffff;
-        padding: 30px;
+        padding: 25px;
         margin: 0;
         width: 100%;
         text-align: left;
@@ -146,9 +147,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
 
     <!-- Inline icon with title -->
-    <h2 class="header-title d-flex align-items-center">
-      <i class="bi bi-house-door-fill me-2"></i> Capstone Project Portal
-    </h2>
+    
 
     <div class="container custom-container d-flex flex-wrap justify-content-center text-center py-4 px-2">
       <div class="row gx-5">
@@ -224,4 +223,8 @@
         <p>&copy; 2025 KUPtech Project</p>
       </div>
     </div>
+
+
+
+    
   </x-basecomponent>
