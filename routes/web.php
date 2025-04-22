@@ -2,13 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\Debug;
+use App\Http\Controllers\Auth;
+use App\Http\Controllers\App;
 
 
 
+Route::get('/', [Auth::class, 'index'])->name('login');
+Route::post('/login', [Auth::class, 'login'])->name('post_login');
+Route::get('/registration', [Auth::class,'registration'])->name('registration');
 
-Route::get('/', [Debug::class, 'index'])->name('index');
-Route::get('/login', [Debug::class, 'login'])->name('login');
-Route::get('/home', [Debug::class, 'homepage'])->name('home');
-Route::get('/listofcapstone', [Debug::class, 'listofcapstone'])->name('list');
-Route::get('/uploadproject', [Debug::class, 'uploadaproject'])->name('uploads');
+Route::get('/home', [App::class,'index'])->name('home');
+Route::post('/register', [Auth::class,'register'])->name('register');

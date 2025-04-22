@@ -25,6 +25,7 @@ return new class extends Migration
             $table->string('desc');
             $table->integer('year')->default(Carbon\Carbon::now()->year);
             $table->string('g_name'); // group name
+            $table->string('file');
             $table->enum('type', ['IoT','App','Web', 'Unknown'])->default('Unknown');
         });
 
