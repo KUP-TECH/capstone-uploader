@@ -15,11 +15,19 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->rememberToken();
-            $table->timestamps();
         });
+
+        Schema::create('capstone', function (Blueprint $table) {
+            $table->id('capstone_id');
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
+            $table->string('title');
+            $table->string('desc');
+            $table->integer('year')->default(Carbon\Carbon::now()->year);
+            $table->string('g_name'); // group name
+            $table->enum('type', ['IoT','App','Web', 'Unknown'])->default('Unknown');
+        });
+
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {
             $table->string('email')->primary();
