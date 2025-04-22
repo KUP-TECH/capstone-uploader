@@ -64,7 +64,6 @@ class App extends Controller
                     'year'      => $data['year'],
                     'g_name'    => $data['g_name'],
                     'type'      => $data['type'],
-                    'desc'      => "Fucking awesome project",
                     'file'      => $filename,
                 ]
             );

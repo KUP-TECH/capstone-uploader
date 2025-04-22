@@ -22,7 +22,6 @@ return new class extends Migration
             $table->id('capstone_id');
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->string('title');
-            $table->string('desc');
             $table->integer('year')->default(Carbon\Carbon::now()->year);
             $table->string('g_name'); // group name
             $table->string('file');
