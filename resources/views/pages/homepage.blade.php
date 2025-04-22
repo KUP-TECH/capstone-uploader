@@ -156,7 +156,7 @@
             <a href="" class="btn btn-primary">List of Capstone</a>
           </div>
           <div class="col d-flex justify-content-center mt-2">
-            <a href="" class="btn btn-primary text-nowrap">Upload a Project</a>
+            <a href="{{ route('upload')  }}" class="btn btn-primary text-nowrap">Upload a Project</a>
           </div>
       </div>
     </div>
