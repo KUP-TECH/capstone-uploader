@@ -153,7 +153,7 @@
     <div class="container custom-container d-flex flex-wrap justify-content-center text-center py-4 px-2">
       <div class="row gx-5">
         <div class="col d-flex justify-content-center mt-2 align-items-center">
-            <a href="{{ route('home')  }}" class="btn btn-primary">List of Capstone</a>
+            <a href="{{ route('list')  }}" class="btn btn-primary">List of Capstone</a>
           </div>
           <div class="col d-flex justify-content-center mt-2">
             <a href="{{ route('upload')  }}" class="btn btn-primary text-nowrap">Upload a Project</a>

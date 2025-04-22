@@ -144,26 +144,30 @@
     <div class="container custom-container d-flex flex-wrap justify-content-center text-center py-4 px-2">
         <div class="row gx-6">
             <div class="col d-flex justify-content-center mt-2 align-items-center">
-                <a href="{" class="btn btn-primary">List of Capstone</a>
+                <a href="{{ route('list')  }}" class="btn btn-primary">List of Capstone</a>
             </div>
             <div class="col d-flex justify-content-center mt-2 align-items-center">
-                <a href=" " class="btn btn-primary text-nowrap">Upload a Project</a>
+                <a href="{{ route('upload')  }}" class="btn btn-primary text-nowrap">Upload a Project</a>
             </div>
         </div>
     </div>
 
     <div class="bg-section">
-    
-        <div class="search-container d-flex align-items-center">
-            <input type="text" class="form-control search-input" placeholder="Search projects...">
-            <button type="submit" class="search-btn">
-            <i class="bi bi-search"></i>
-            </button>
-        </div>
-            
+        <form action="{{ route('list') }}" method="GET">
+            <div class="search-container d-flex align-items-center flex-row flex-nowrap">
+
+                    <input type="text" class="form-control search-input" name="search" placeholder="Search projects...">
+                    <button type="submit" class="search-btn">
+                        <i class="bi bi-search"></i>
+                    </button>
+            </div>
+        </form>
+        
         <div class="footer-overlay">
             <p>&copy; 2025 KUPtech Project</p>
         </div>
+
+
         <div class="container mt-4 mb-5">
         <div class="row justify-content-center">
             <div class="col-12">
@@ -179,36 +183,14 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>RehisPRC: Revolutionizing Data Entry and Retrieval for Madrid’s Local Civil Registry</td>
-                                    <td>Calipayán’s Group</td>
-                                    <td>2025</td>
-                                </tr>
-                                <tr>
-                                    <td>OJTrack – Android and Web-Based DJT Monitoring and Attendance System with Secure Tracking</td>
-                                    <td>Atenin’s Group</td>
-                                    <td>2025</td>
-                                </tr>
-                                <tr>
-                                    <td>eLixbot: A Mobile App for Tourism Promotion and Local Business in CCMCLCor</td>
-                                    <td>Riva’s Group</td>
-                                    <td>2025</td>
-                                </tr>
-                                <tr>
-                                    <td>MedSched: A Web-App Appointment Scheduling System with SMS Notifications</td>
-                                    <td>Aguirre’s Group</td>
-                                    <td>2025</td>
-                                </tr>
-                                <tr>
-                                    <td>eTitulo: A Smart Solution for Lot Reservation, Processing, and Checklist Requirements</td>
-                                    <td>Carisday’s Group</td>
-                                    <td>2025</td>
-                                </tr>
-                                <tr>
-                                    <td>Event Planning Management System</td>
-                                    <td>Lalyns Group</td>
-                                    <td>2025</td>
-                                </tr>
+
+                                @foreach ($data as $d)
+                                    <tr>
+                                        <td>{{ $d['title'] }}</td>
+                                        <td>{{ $d['g_name'] }}</td>
+                                        <td>{{ $d['year'] }}</td>
+                                    </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

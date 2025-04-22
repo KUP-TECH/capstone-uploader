@@ -19,6 +19,20 @@ class App extends Controller
         return view('pages.homepage', ['data' => $data]);
     }
 
+    public function list(Request $request) {
+
+        $search = $request->input('search');
+        if ($search) {
+            $capstone = CapstoneModel::where('title', 'LIKE', "%{$search}%")
+                ->get();
+        } else {
+            $capstone = CapstoneModel::all();
+        }
+
+
+        return view('pages.listofcapstone', ['data'=> $capstone]);
+    }
+
     public function upload() {
 
         return view('pages.uploadproject');

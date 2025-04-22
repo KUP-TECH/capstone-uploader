@@ -16,6 +16,7 @@ Route::post('/register', [Auth::class,'register'])->name('register');
 
 Route::middleware(['auth'])->group(function (){ 
     Route::get('/home', [App::class,'index'])->name('home');
+    Route::get('/list', [App::class,'list'])->name('list');
     Route::get('/upload', [App::class,'upload'])->name('upload');
     Route::post('/store_project', [App::class,'store'])->name('store');
 });
