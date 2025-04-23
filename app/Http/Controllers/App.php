@@ -68,7 +68,7 @@ class App extends Controller
 
 
     public function download(Request $request) {
-        $id = $request->input('id');
+        $id = $request['id'];
         $capstone = CapstoneModel::find($id);
         if ($capstone) {
             $filePath = public_path('storage/projects/' . $capstone['file']);
