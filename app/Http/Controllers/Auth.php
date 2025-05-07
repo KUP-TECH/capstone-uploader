@@ -46,8 +46,15 @@ class Auth extends Controller
 
 
         if (FacadesAuth::attempt($credentials)) {
+
+            $user = FacadesAuth::user();
             $request->session()->regenerate();
-            return redirect()->route('home');
+
+            if ($user->role == 'admin') {
+                return redirect()->route('admin');
+            } else if ($user->role == 'user') {
+                return redirect()->route('home');
+            }
         }
 
 
