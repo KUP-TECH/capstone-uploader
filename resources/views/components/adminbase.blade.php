@@ -100,9 +100,10 @@
 
         </nav>
         <!-- End Navbar -->
+        {{ $slot }}
         <div class="container-fluid py-2">
             
-            {{ $slot }}
+            
 
             <footer class="footer py-4  ">
                 <div class="container-fluid">
