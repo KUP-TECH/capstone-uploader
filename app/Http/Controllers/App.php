@@ -43,7 +43,7 @@ class App extends Controller
         $capstone = CapstoneModel::find($id);
         if ($capstone) {
             
-            if($capstone['user_id'] != Auth::id()) {
+            if($capstone['user_id'] != Auth::id() && Auth::user()->role != 'admin') {
                 return back()->with('msg', 'You are not authorized to delete this project.');
             }
             
